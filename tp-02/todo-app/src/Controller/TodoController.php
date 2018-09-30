@@ -79,6 +79,38 @@ class TodoController extends Controller
             );
     }
     /**
+     * @Route("/list-active",name="todo_active_list",methods="GET")
+     */
+    public function activelistAction()
+    {
+        $htmlpage = '<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>todos list!</title>
+    </head>
+    <body>
+        <h1>todos list</h1>
+        <p>Here are your active todos:</p>
+        <ul>';
+
+        $em = $this->getDoctrine()->getManager();
+        $todos = $em->getRepository(Todo::class)->findByCompleted(false);
+        foreach($todos as $todo) {
+           $htmlpage .= '<li>
+            <a href="/todo/'.$todo->getid().'">'.$todo->getTitle().'</a></li>';
+         }
+        $htmlpage .= '</ul>';
+
+        $htmlpage .= '</body></html>';
+
+        return new Response(
+            $htmlpage,
+            Response::HTTP_OK,
+            array('content-type' => 'text/html')
+            );
+    }
+    /**
      * Finds and displays a todo entity.
      *
      * @Route("/{id}", name="todo_show", requirements={ "id": "\d+"}, methods="GET")
