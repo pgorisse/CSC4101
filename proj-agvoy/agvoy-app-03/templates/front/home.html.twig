@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+    <h1>Liste des circuits</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Description</th>
+            <th>Ville départ</th>
+            <th>Pays départ</th>
+            <th>Durée</th>
+            <th>Ville arrivée</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for circuit in circuits %}
+            <tr>
+                <td>{{ circuit.id }}</td>
+                <td>{{ circuit.description }}</td>
+                <td>{{ circuit.villeDepart }}</td>
+                <td>{{ circuit.paysDepart }}</td>
+                <td>{{ circuit.dureeCircuit }}</td>
+                <td>{{ circuit.villeArrivee }}</td>
+                <td><a href={{ path('front_circuit_show',{id:circuit.id}) }}>détails</a></td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no circuits found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

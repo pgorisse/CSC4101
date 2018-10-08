@@ -1,0 +1,67 @@
+{# templates/front/circuit_show.html.twig #}
+
+{# Template de la page de consultation d'un circuit en front #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %} Détails du circuit {{ circuit.id}} {% endblock %}
+
+{% block body %}
+    <h1>Circuit {{circuit.id}}</h1>
+
+    {{ dump(circuit) }}
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ circuit.id }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ circuit.description }}</td>
+        </tr>
+        <tr>
+            <th>Ville départ</th>
+            <td>{{ circuit.villeDepart }}</td>
+        </tr>
+        <tr>
+            <th>Pays départ</th>
+            <td>{{ circuit.paysDepart }}</td>
+        </tr>
+        <tr>
+            <th>Durée circuit</th>
+            <td>{{ circuit.dureeCircuit }}</td>
+        </tr>
+        <tr>
+            {#<th>Etapes</th>
+<td>{{ circuit.etapes }}</td>#}
+        </tr>
+        <tr>
+            <th>Ville arivée</th>
+            <td>{{ circuit.villeArrivee }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <p>Les étapes de ce circuit sont:</p>
+    <table>
+        <thead>
+        <tr>
+            <th>Numéro</th>
+            <th>Ville</th>
+            <th>Durée</th>
+        </tr>
+        </thead>
+
+        {%  for etape in circuit.etapes %}
+            <tr>
+                <td>{{ etape.numeroEtape }}</td>
+                <td>{{ etape.villeEtape }}</td>
+                <td>{{ etape.nombreJours }}</td>
+            </tr>
+        {% endfor %} {# etapes #}
+    </table>
+    {{ dump(circuit) }} 
+
+    <a href="{{ path('front') }}">retour à l'accueil</a>
+{% endblock %}
