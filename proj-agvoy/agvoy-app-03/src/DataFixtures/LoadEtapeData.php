@@ -51,7 +51,7 @@ class LoadEtapeData extends Fixture implements DependentFixtureInterface
 		
 		
 		$etape = new Etape();
-		$etape->setNumeroEtape(3);
+		$etape->setNumeroEtape(2);
 		$etape->setVilleEtape("Hôi An");
 		$etape->setNombreJours(1);
 //		$etape = $circuit->addEtape("Hôi An", 1);
@@ -59,7 +59,7 @@ class LoadEtapeData extends Fixture implements DependentFixtureInterface
 		$manager->persist($etape);
 		
 		$etape = new Etape();
-		$etape->setNumeroEtape(4);
+		$etape->setNumeroEtape(3);
 		$etape->setVilleEtape("Hô Chi Minh");
 		$etape->setNombreJours(1);
 //		$etape = $circuit->addEtape("Hô Chi Minh", 1);
@@ -67,7 +67,7 @@ class LoadEtapeData extends Fixture implements DependentFixtureInterface
 		$manager->persist($etape);
 		
 		$etape = new Etape();
-		$etape->setNumeroEtape(2);
+		$etape->setNumeroEtape(4);
 		$etape->setVilleEtape("Dà Nang");
 		$etape->setNombreJours(1);
 //		$etape = $circuit->addEtape("Dà Nang", 1);

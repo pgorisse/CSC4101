@@ -4,42 +4,43 @@
 
 {% extends 'base.html.twig' %}
 
-{% block title %} Détails du circuit {{ circuit.id}} {% endblock %}
+{% block title %} Détails du circuit {{ progCircuit.id}} {% endblock %}
 
 {% block body %}
-    <h1>Circuit {{circuit.id}}</h1>
-
-    {{ dump(circuit) }}
-
+    <h1>Circuit {{ progCircuit.id }}</h1>
     <table class="table">
         <tbody>
         <tr>
             <th>Id</th>
-            <td>{{ circuit.id }}</td>
+            <td>{{ progCircuit.id }}</td>
         </tr>
         <tr>
             <th>Description</th>
-            <td>{{ circuit.description }}</td>
+            <td>{{ progCircuit.circuit.description }}</td>
         </tr>
         <tr>
             <th>Ville départ</th>
-            <td>{{ circuit.villeDepart }}</td>
+            <td>{{ progCircuit.circuit.villeDepart }}</td>
         </tr>
         <tr>
             <th>Pays départ</th>
-            <td>{{ circuit.paysDepart }}</td>
+            <td>{{ progCircuit.circuit.paysDepart }}</td>
         </tr>
         <tr>
             <th>Durée circuit</th>
-            <td>{{ circuit.dureeCircuit }}</td>
+            <td>{{ progCircuit.circuit.dureeCircuit }}</td>
         </tr>
         <tr>
             {#<th>Etapes</th>
-<td>{{ circuit.etapes }}</td>#}
+<td>{{ progCircuit.etapes }}</td>#}
         </tr>
         <tr>
             <th>Ville arivée</th>
-            <td>{{ circuit.villeArrivee }}</td>
+            <td>{{ progCircuit.circuit.villeArrivee }}</td>
+        </tr>
+        <tr>
+            <th>Prix</th>
+            <td>{{ progCircuit.prix }}{{ "€" }}</td>
         </tr>
         </tbody>
     </table>
@@ -53,7 +54,7 @@
         </tr>
         </thead>
 
-        {%  for etape in circuit.etapes %}
+        {%  for etape in progCircuit.circuit.etapes %}
             <tr>
                 <td>{{ etape.numeroEtape }}</td>
                 <td>{{ etape.villeEtape }}</td>
@@ -61,7 +62,7 @@
             </tr>
         {% endfor %} {# etapes #}
     </table>
-    {{ dump(circuit) }} 
+    {{ dump(progCircuit) }}
 
     <a href="{{ path('front') }}">retour à l'accueil</a>
 {% endblock %}

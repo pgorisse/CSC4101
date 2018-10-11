@@ -18,18 +18,23 @@
             <th>Pays départ</th>
             <th>Durée</th>
             <th>Ville arrivée</th>
+            <th>Date départ</th>
+            <th>Prix</th>
         </tr>
         </thead>
         <tbody>
-        {% for circuit in circuits %}
+        {% for progCircuit in progCircuits %}
             <tr>
-                <td>{{ circuit.id }}</td>
-                <td>{{ circuit.description }}</td>
-                <td>{{ circuit.villeDepart }}</td>
-                <td>{{ circuit.paysDepart }}</td>
-                <td>{{ circuit.dureeCircuit }}</td>
-                <td>{{ circuit.villeArrivee }}</td>
-                <td><a href={{ path('front_circuit_show',{id:circuit.id}) }}>détails</a></td>
+                <td>{{ progCircuit.id }}</td>
+                <td>{{ progCircuit.circuit.description }}</td>
+                <td>{{ progCircuit.circuit.villeDepart }}</td>
+                <td>{{ progCircuit.circuit.paysDepart }}</td>
+                <td>{{ progCircuit.circuit.dureeCircuit }}</td>
+                <td>{{ progCircuit.circuit.villeArrivee }}</td>
+                <td>{{ progCircuit.dateDepart|date('d-m-Y') }}</td>
+                <td>{{ progCircuit.prix }}{{ "€" }}</td>
+
+                <td><a href={{ path('front_circuit_show',{id:progCircuit.id}) }}>Détails</a></td>
             </tr>
         {% else %}
             <tr>
