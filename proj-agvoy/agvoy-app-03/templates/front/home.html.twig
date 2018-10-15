@@ -12,7 +12,6 @@
     <table class="table">
         <thead>
         <tr>
-            <th>Id</th>
             <th>Description</th>
             <th>Ville départ</th>
             <th>Pays départ</th>
@@ -25,11 +24,10 @@
         <tbody>
         {% for progCircuit in progCircuits %}
             <tr>
-                <td>{{ progCircuit.id }}</td>
                 <td>{{ progCircuit.circuit.description }}</td>
                 <td>{{ progCircuit.circuit.villeDepart }}</td>
                 <td>{{ progCircuit.circuit.paysDepart }}</td>
-                <td>{{ progCircuit.circuit.dureeCircuit }}</td>
+                <td>{{ progCircuit.circuit.dureeCircuit }}{{ " jours" }}</td>
                 <td>{{ progCircuit.circuit.villeArrivee }}</td>
                 <td>{{ progCircuit.dateDepart|date('d-m-Y') }}</td>
                 <td>{{ progCircuit.prix }}{{ "€" }}</td>

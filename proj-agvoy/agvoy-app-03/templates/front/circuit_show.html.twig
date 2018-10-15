@@ -4,7 +4,7 @@
 
 {% extends 'base.html.twig' %}
 
-{% block title %} Détails du circuit {{ progCircuit.id}} {% endblock %}
+{% block title %} Détails du circuit {{ progCircuit.id }} {% endblock %}
 
 {% block body %}
     <h1>Circuit {{ progCircuit.id }}</h1>
@@ -27,8 +27,12 @@
             <td>{{ progCircuit.circuit.paysDepart }}</td>
         </tr>
         <tr>
+            <th>Date départ</th>
+            <td>{{ progCircuit.dateDepart|date('d-m-Y') }}</td>
+        </tr>
+        <tr>
             <th>Durée circuit</th>
-            <td>{{ progCircuit.circuit.dureeCircuit }}</td>
+            <td>{{ progCircuit.circuit.dureeCircuit }}{{ " jours" }}</td>
         </tr>
         <tr>
             {#<th>Etapes</th>
@@ -46,21 +50,21 @@
     </table>
     <p>Les étapes de ce circuit sont:</p>
     <table>
-        <thead>
-        <tr>
+        <thead><tr>
             <th>Numéro</th>
             <th>Ville</th>
             <th>Durée</th>
-        </tr>
-        </thead>
+        </tr></thead>
 
-        {%  for etape in progCircuit.circuit.etapes %}
+        <tbody>{%  for etape in progCircuit.circuit.etapes %}
             <tr>
                 <td>{{ etape.numeroEtape }}</td>
                 <td>{{ etape.villeEtape }}</td>
-                <td>{{ etape.nombreJours }}</td>
+                <td>{{ etape.nombreJours }}{{ " jours" }}</td>
             </tr>
-        {% endfor %} {# etapes #}
+        {% else %}
+            <p>Pas d'étapes trouvées.</p>
+        {% endfor %} {# etapes #}</tbody>
     </table>
     {{ dump(progCircuit) }}
 
