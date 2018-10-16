@@ -4,7 +4,7 @@
 
 {% extends 'base.html.twig' %}
 
-{% block title %} Détails du circuit {{ progCircuit.circuit.description }} {% endblock %}
+{% block title %} Détails du circuit {{ progCircuit.circuit.id }} {% endblock %}
 
 {% block body %}
     <h2>Circuit {{ progCircuit.circuit.description }}</h2>
@@ -57,5 +57,7 @@
             <p>Pas d'étapes trouvées.</p>
         {% endfor %} {# etapes #}</tbody>
     </table>
+
+    <a href="{{ path('front') }}">Retour à la liste des circuits programmés</a>
 
 {% endblock %}

@@ -8,7 +8,12 @@ parameters:
 doctrine:
     dbal:
         # configure these for your database server
-        driver: 'pdo_sqlite'
+        dbname: agvoy
+        host: localhost
+        port: ~
+        user: root
+        password: clochette
+        driver: 'pdo_mysql'
         charset: utf8mb4
 
         # With Symfony 3.3, remove the `resolve:` prefix
