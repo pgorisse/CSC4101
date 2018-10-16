@@ -7,12 +7,14 @@
 {% block title %}{{ parent() }}{% endblock %}
 
 {% block main %}
-
-<div class="align-content-center text-center"><h1>Welcome</h1>
-
-<p>{{ welcome }}</p></div>
-
+    <div class="container ct-landing">
+        <div class="text-center">
+            <h1>Welcome</h1>
+            <p>{{ welcome }}</p> <br>
+            <a class='btn btn-outline-primary btn-lg' href="{{ path('front') }}">Accueil</a>
+        </div>
+    </div>
 {% endblock %} {# main #}
-{% block footer %}<a class="modal-footer" href="{{ path('front') }}">Accueil</a>{% endblock %}
+{% block footer %}{% endblock %}
 
 
