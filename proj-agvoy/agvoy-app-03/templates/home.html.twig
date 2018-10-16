@@ -4,15 +4,15 @@
 
 {% extends "base.html.twig" %}
 
-{% block title %}{{ parent() }} - Welcome{% endblock %}
+{% block title %}{{ parent() }}{% endblock %}
 
 {% block main %}
 
-<h1>Welcome</h1>
+<div class="align-content-center text-center"><h1>Welcome</h1>
 
-<p>{{ welcome }}</p>
-
-<p><a href="{{ path('front') }}">Accueil du site</a></p>
+<p>{{ welcome }}</p></div>
 
 {% endblock %} {# main #}
+{% block footer %}<a class="modal-footer" href="{{ path('front') }}">Accueil</a>{% endblock %}
+
 

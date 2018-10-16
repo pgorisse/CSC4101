@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
             <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -9,17 +10,19 @@
     </head>
     <body>
         {% block body %}
-	{% block menu %}{% endblock %} {# menu #}
+            {% block menu %}{% endblock %} {# menu #}
 
-    {% block main %}MAIN{% endblock %} {# main #}
+            {% block main %}MAIN{% endblock %} {# main #}
+        <br>
 
-	    {% endblock %} {# body #}
+        {% endblock %} {# body #}
 
-	{% block footer %}
-	<div >
-	</div>
-	{% endblock %} {# footer #}
-</body>
+        {% block footer %}
+            <div class="card-footer text-center fixed-bottom">
+                <a class="text-primary" href={{ path('front') }}>Retour à l'accueil</a>
+            </div>
+        {% endblock %} {# footer #}
+    </body>
 	{% block javascripts %}
         <script src="/js/bootstrap.min.js"></script>
 	{% endblock %} {# javascripts #}
