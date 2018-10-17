@@ -25,7 +25,7 @@
         </tr>
         <tr>
             <th>Durée circuit</th>
-            <td>{{ progCircuit.circuit.dureeCircuit }}{{ " jours" }}</td>
+            <td>{{ progCircuit.circuit.dureeCircuit }}{{ " jour(s)" }}</td>
         </tr>
         <tr>
             <th>Ville arivée</th>
@@ -51,13 +51,12 @@
             <tr>
                 <td>{{ etape.numeroEtape }}</td>
                 <td>{{ etape.villeEtape }}</td>
-                <td>{{ etape.nombreJours }}{{ " jours" }}</td>
+                <td>{{ etape.nombreJours }}{{ " jour(s)" }}</td>
             </tr>
         {% else %}
             <p>Pas d'étapes trouvées.</p>
         {% endfor %} {# etapes #}</tbody>
     </table>
 
-    <a href="{{ path('front') }}">Retour à la liste des circuits programmés</a>
-
 {% endblock %}
+{% set progCircuit=progCircuit %}

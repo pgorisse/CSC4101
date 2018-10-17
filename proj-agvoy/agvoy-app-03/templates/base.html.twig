@@ -10,35 +10,14 @@
         {% endblock %}
     </head>
     <body>
-        <header>{% block header %}
-            <div class="jumbotron jumbotron-fluid jumbotron-header">
-                <p class="display-3 text-center">AgVoy</p>
-                <p class="text-center">L'agence de voyage en ligne</p>
-                <nav class="navbar font-weight-bold">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a  href="{{ path('front') }}">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a  href="{{ path('front') }}">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a  href="{{ path('front') }}">Accueil</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            {% endblock %}
-        </header>
+    {% block header %}
+        {{ render(controller('App\\Controller\\HeaderController:header')) }}
+    {% endblock %}
         {% block body %}
             {% block menu %}{% endblock %} {# menu #}
-
             {% block main %}MAIN{% endblock %} {# main #}
         <br>
-
         {% endblock %} {# body #}
-        </div>
-
         {% block footer %}
             <div class="card-footer text-center fixed-bottom">
                 <a class="text-primary" href={{ path('front') }}>Retour à l'accueil</a>

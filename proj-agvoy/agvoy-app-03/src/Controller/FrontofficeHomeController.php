@@ -32,5 +32,10 @@ class FrontofficeHomeController extends AbstractController
             'progCircuit' => $progCircuit,
         ]);
     }
+    public function circuitList(){
+        $em=$this->getDoctrine()->getManager();
+        $progCircuits=$em->getRepository(ProgrammationCircuit::class)->findAll();
+        return array(['progCircuits' => $progCircuits,]);
+    }
 }
 

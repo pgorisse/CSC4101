@@ -29,7 +29,7 @@
                     <td>{{ progCircuit.circuit.id }}</td>
                     <td>{{ progCircuit.circuit.villeDepart }}</td>
                     <td>{{ progCircuit.circuit.paysDepart }}</td>
-                    <td>{{ progCircuit.circuit.dureeCircuit }} jours</td>
+                    <td>{{ progCircuit.circuit.dureeCircuit }} jour(s)</td>
                     <td>{{ progCircuit.circuit.villeArrivee }}</td>
                     <td>{{ progCircuit.dateDepart|date('d-m-Y') }}</td>
                     <td>{{ progCircuit.prix }}€</td>
@@ -60,10 +60,7 @@
                                 <a href="{{ path('front_circuit_show', {id:progCircuit.id})  }}">Voir plus...</a>
                             </table>
                         </div>
-
                     </td>
-
-
                 </tr>
             {% else %}
                 <tr>
