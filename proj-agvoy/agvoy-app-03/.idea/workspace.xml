@@ -1,167 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2b5812b-d189-48b4-adec-f474416ffe3b" name="Default" comment="">
+    <list default="true" id="b2b5812b-d189-48b4-adec-f474416ffe3b" name="Default" comment="intégration des formulaires edit delete create des etapes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Circuit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Circuit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/circuit_show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/circuit_show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/front/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../public_html/coucou" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/.env.dist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/.idea/symfony2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/.idea/todo-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/bin/console" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/bin/phpunit" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/bundles.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/dev/debug.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/dev/easy_log_handler.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/dev/monolog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/dev/routing.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/dev/swiftmailer.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/dev/web_profiler.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/doctrine.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/doctrine_migrations.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/framework.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/prod/doctrine.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/prod/monolog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/routing.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/security.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/sensio_framework_extra.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/swiftmailer.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/test/framework.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/test/monolog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/test/routing.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/test/swiftmailer.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/test/web_profiler.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/translation.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/twig.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/packages/validator.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/routes.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/routes/annotations.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/routes/dev/twig.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/routes/dev/web_profiler.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/config/services.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/phpunit.xml.dist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Command/DelTodoCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Command/ListTodosCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Command/ListactiveTodosCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Command/NewTodoCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Command/ShowTodoCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Command/UpdateTodoCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Controller/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Controller/FrontofficeHomeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Controller/IndexController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Controller/TodoController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/DataFixtures/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/DataFixtures/AppFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Entity/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Entity/Todo.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Migrations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/src/Repository/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/symfony.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/templates/base.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/templates/frontoffice_home/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/templates/home.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/templates/todo/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/templates/todo/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/tests/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/tests/Controller/TodoControlerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/tests/Unit/TodoUnitTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/todo.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-03/todo-app/translations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/.env.dist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/.idea/symfony2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/.idea/todo-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/assets/css/bootstrap-darkly.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/assets/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/assets/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/assets/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/assets/js/jquery-3.3.1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/assets/js/popper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/bin/console" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/bin/phpunit" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/bundles.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/dev/debug.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/dev/easy_log_handler.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/dev/monolog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/dev/routing.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/dev/swiftmailer.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/dev/web_profiler.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/doctrine.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/doctrine_migrations.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/framework.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/prod/doctrine.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/prod/monolog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/routing.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/security.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/sensio_framework_extra.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/swiftmailer.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/test/framework.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/test/monolog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/test/routing.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/test/swiftmailer.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/test/web_profiler.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/translation.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/twig.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/packages/validator.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/routes.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/routes/annotations.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/routes/dev/twig.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/routes/dev/web_profiler.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/config/services.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/phpunit.xml.dist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/public/css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/public/js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Command/DelTodoCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Command/ListTodosCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Command/ListactiveTodosCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Command/NewTodoCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Command/ShowTodoCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Command/UpdateTodoCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Controller/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Controller/IndexController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Controller/TodoController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/DataFixtures/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/DataFixtures/AppFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Entity/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Entity/Todo.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Menu/MenuBuilder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Migrations/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/src/Repository/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/symfony.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/templates/base.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/templates/baselayout.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/templates/home.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/templates/todo/active-index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/templates/todo/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/templates/todo/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/tests/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/tests/Controller/TodoControlerTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/tests/Unit/TodoUnitTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/todo.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../tp-04/todo-app/translations/.gitignore" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,37 +20,47 @@
     <session id="640100476">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.42" value="1" />
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.96" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="env" value="1" />
-          <entry key="php" value="1" />
+          <entry key="gitignore" value="1" />
+          <entry key="php" value="5" />
+          <entry key="twig" value="6" />
           <entry key="yaml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="1" />
-          <entry key="PHP" value="1" />
+          <entry key="PHP" value="5" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Twig" value="6" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="26" />
-          <entry key="php" value="11" />
-          <entry key="twig" value="568" />
+          <entry key="php" value="21" />
+          <entry key="twig" value="636" />
+          <entry key="txt" value="136" />
           <entry key="yaml" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="26" />
-          <entry key="PHP" value="11" />
-          <entry key="Twig" value="568" />
+          <entry key="PHP" value="21" />
+          <entry key="PLAIN_TEXT" value="136" />
+          <entry key="Twig" value="636" />
           <entry key="YAML" value="25" />
         </counts>
       </usages-collector>
@@ -224,65 +78,90 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Circuit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="944">
-              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+            <state relative-caret-position="1517">
+              <caret line="190" column="5" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/ProgrammationCircuit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/Controller/HeaderController.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/FrontofficeHomeController.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/LandingController.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/EtapeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+            <state relative-caret-position="120">
+              <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
               <folding>
-                <element signature="e#34#57#0#PHP" expanded="true" />
+                <element signature="e#34#55#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/front/home.html.twig">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/etape/_form.html.twig">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/etape/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+            <state>
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/front/circuit_show.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/etape/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+            <state>
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/etape/new.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="19" selection-end-column="14" />
+            <state>
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Etape.php">
+        <entry file="file://$PROJECT_DIR$/templates/etape/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+            <state>
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/etape/_delete_form.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#37#49#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -322,7 +201,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/front/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Entity/Circuit.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/LoadProgrammationCircuitData.php" />
         <option value="$PROJECT_DIR$/src/Entity/ProgrammationCircuit.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/LoadEtapeData.php" />
@@ -334,6 +212,8 @@
         <option value="$PROJECT_DIR$/src/Controller/FrontofficeHomeController.php" />
         <option value="$PROJECT_DIR$/templates/front/circuit_show.html.twig" />
         <option value="$PROJECT_DIR$/templates/front/home.html.twig" />
+        <option value="$PROJECT_DIR$/src/Entity/Circuit.php" />
+        <option value="$PROJECT_DIR$/src/Controller/EtapeController.php" />
       </list>
     </option>
   </component>
@@ -445,10 +325,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-591" />
-    <option name="width" value="960" />
-    <option name="height" value="997" />
+    <option name="x" value="39" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -489,6 +369,12 @@
               <item name="agvoy-app-03" type="b2602c69:ProjectViewProjectNode" />
               <item name="agvoy-app-03" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="etape" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agvoy-app-03" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agvoy-app-03" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -523,7 +409,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -561,21 +447,31 @@
       <workItem from="1539295884395" duration="151000" />
       <workItem from="1539612479914" duration="2255000" />
       <workItem from="1539616926499" duration="3089000" />
-      <workItem from="1539682719327" duration="6438000" />
+      <workItem from="1539682719327" duration="6779000" />
+      <workItem from="1539689900164" duration="47000" />
+      <workItem from="1539695784002" duration="197000" />
+      <workItem from="1539940122159" duration="1791000" />
+      <workItem from="1539942659205" duration="2196000" />
     </task>
+    <task id="LOCAL-00001" summary="Collpase des détails d'un circuit prog + lien vers circuit_show">
+      <created>1539689302156</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539689302156</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43055000" />
+    <option name="totallyTimeSpent" value="47627000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-591" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09594883" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21104388" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -586,9 +482,11 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="9" sideWeight="0.75469726" visible="true" weight="0.29955456" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.329718" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.2453027" side_tool="true" weight="0.32962137" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.3295082" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -600,6 +498,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Collpase des détails d'un circuit prog + lien vers circuit_show" />
+    <MESSAGE value="intégration des formulaires edit delete create des etapes" />
+    <option name="LAST_COMMIT_MESSAGE" value="intégration des formulaires edit delete create des etapes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Repository/CircuitRepository.php">
@@ -628,34 +531,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap.css" />
     <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css" />
-    <entry file="file://$PROJECT_DIR$/templates/home.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Etape.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html.twig" />
+    <entry file="file://$PROJECT_DIR$/src/Controller/IndexController.php" />
     <entry file="file://$PROJECT_DIR$/src/DataFixtures/LoadEtapeData.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1972">
           <caret line="119" column="34" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
-          <folding>
-            <element signature="e#36#79#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -663,9 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding>
-            <element signature="e#118#177#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -686,30 +564,16 @@
     <entry file="file://$PROJECT_DIR$/src/DataFixtures/LoadCircuitData.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/ProgrammationCircuit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="459">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Circuit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/FrontofficeHomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
+        <state relative-caret-position="442">
           <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
           <folding>
             <element signature="e#34#57#0#PHP" expanded="true" />
@@ -717,17 +581,109 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/circuit_show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+        <state relative-caret-position="1037">
+          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Etape.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/front/home.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        <state relative-caret-position="1037">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/HeaderController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/LandingController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/etape/_delete_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#37#49#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/etape/_form.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/etape/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/etape/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/etape/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Circuit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1517">
+          <caret line="190" column="5" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/etape/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/EtapeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+          <folding>
+            <element signature="e#34#55#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

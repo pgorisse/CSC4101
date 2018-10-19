@@ -14,11 +14,11 @@
             <thead>
             <tr>
                 <th>Description</th>
-                <th>Ville départ</th>
-                <th>Pays départ</th>
+                <th>Ville de départ</th>
+                <th>Pays de départ</th>
                 <th>Durée</th>
-                <th>Ville arrivée</th>
-                <th>Date départ</th>
+                <th>Ville d'arrivée</th>
+                <th>Date du départ</th>
                 <th>Prix</th>
                 <th></th>
             </tr>
@@ -57,9 +57,11 @@
                                 {% else %}
                                     <p>Pas d'étapes trouvées.</p>
                                 {% endfor %} {# etapes #}</tbody>
-                                <a href="{{ path('front_circuit_show', {id:progCircuit.id})  }}">Voir plus...</a>
                             </table>
+                            <a href="{{ path('front_circuit_show', {id:progCircuit.id})  }}">Voir plus...</a>
+
                         </div>
+
                     </td>
                 </tr>
             {% else %}

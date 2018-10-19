@@ -4,7 +4,7 @@
 
 {% extends 'base.html.twig' %}
 
-{% block title %} Détails du circuit {{ progCircuit.circuit.id }} {% endblock %}
+{% block title %} Détails du circuit {{ progCircuit.circuit.description }} {% endblock %}
 
 {% block body %}
     <h2>Circuit {{ progCircuit.circuit.description }}</h2>
@@ -12,23 +12,23 @@
     <table class="table table-striped table-bordered">
         <tbody>
         <tr>
-            <th>Ville départ</th>
+            <th>Ville de départ</th>
             <td>{{ progCircuit.circuit.villeDepart }}</td>
         </tr>
         <tr>
-            <th>Pays départ</th>
+            <th>Pays de départ</th>
             <td>{{ progCircuit.circuit.paysDepart }}</td>
         </tr>
         <tr>
-            <th>Date départ</th>
+            <th>Date du départ</th>
             <td>{{ progCircuit.dateDepart|date('d-m-Y') }}</td>
         </tr>
         <tr>
-            <th>Durée circuit</th>
+            <th>Durée du circuit</th>
             <td>{{ progCircuit.circuit.dureeCircuit }}{{ " jour(s)" }}</td>
         </tr>
         <tr>
-            <th>Ville arivée</th>
+            <th>Ville d'arivée</th>
             <td>{{ progCircuit.circuit.villeArrivee }}</td>
         </tr>
         <tr>
