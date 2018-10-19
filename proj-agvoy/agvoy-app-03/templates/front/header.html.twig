@@ -1,14 +1,14 @@
 <header>
-        <div class="jumbotron jumbotron-fluid jumbotron-header">
+        <div class="jumbotron jumbotron-fluid jumbotron-header align-content-center">
                 <p class="display-3 text-center">AgVoy</p>
                 <p class="text-center">L'agence de voyage en ligne</p>
             <nav>
-                <ul class="nav nav-pills nav-justified">
+                <ul class="nav nav-justified bg-custom rounded shadow">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ path('front') }}">Accueil</a>
+                        <a class="nav-link text-dark" href="{{ path('front') }}">Accueil</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Circuits</a>
+                        <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">Circuits</a>
                         <div class="dropdown-menu">
                             {% for progc in progCircuits %}
                                 <a class="dropdown-item" href="{{ path('front_circuit_show',{'id':progc.id}) }}">

@@ -14,14 +14,14 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Controleur de la page d'accueil
  */
-class IndexController extends Controller
+class LandingController extends Controller
 {    
     /**
      * @Route("/", name = "home", methods="GET")
      */
     public function indexAction()
     {
-        return $this->render('home.html.twig',array(
+        return $this->render('landing.html.twig',array(
             'welcome' => "Bonne utilisation de l'agence de voyage")
             );
     }

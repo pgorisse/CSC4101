@@ -5,14 +5,15 @@
 {% extends "base.html.twig" %}
 
 {% block title %}{{ parent() }}{% endblock %}
+{% block header %}{% endblock %}
 
 {% block main %}
-    <div class="container ct-landing">
-        <div class="text-center">
+    <div class="container-fluid ct-landing">
+        <div class="text-center pagination-lg">
             <h1>Welcome</h1>
             <p>{{ welcome }}</p> <br>
             <a class='btn btn-outline-primary btn-lg' href="{{ path('front') }}">Accueil</a>
-        </div>
+        </div><br><br><br><br><br><br><br><br>
     </div>
 {% endblock %} {# main #}
 {% block footer %}{% endblock %}
