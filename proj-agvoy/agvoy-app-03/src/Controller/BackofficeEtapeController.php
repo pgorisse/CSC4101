@@ -11,20 +11,20 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/etape")
+ * @Route("/admin/etape")
  */
-class EtapeController extends AbstractController
+class BackofficeEtapeController extends AbstractController
 {
     /**
-     * @Route("/", name="etape_index", methods="GET")
+     * @Route("/", name="admin_etape_index", methods="GET")
      */
     public function index(EtapeRepository $etapeRepository): Response
     {
-        return $this->render('etape/index.html.twig', ['etapes' => $etapeRepository->findAll()]);
+        return $this->render('back/etape/index.html.twig', ['etapes' => $etapeRepository->findAll()]);
     }
 
     /**
-     * @Route("/new", name="etape_new", methods="GET|POST")
+     * @Route("/new", name="admin_etape_new", methods="GET|POST")
      */
     public function new(Request $request): Response
     {
@@ -37,25 +37,25 @@ class EtapeController extends AbstractController
             $em->persist($etape);
             $em->flush();
 
-            return $this->redirectToRoute('etape_index');
+            return $this->redirectToRoute('admin_etape_index');
         }
 
-        return $this->render('etape/new.html.twig', [
+        return $this->render('back/etape/new.html.twig', [
             'etape' => $etape,
             'form' => $form->createView(),
         ]);
     }
 
     /**
-     * @Route("/{id}", name="etape_show", methods="GET")
+     * @Route("/{id}", name="admin_etape_show", methods="GET")
      */
     public function show(Etape $etape): Response
     {
-        return $this->render('etape/show.html.twig', ['etape' => $etape]);
+        return $this->render('back/etape/show.html.twig', ['etape' => $etape]);
     }
 
     /**
-     * @Route("/{id}/edit", name="etape_edit", methods="GET|POST")
+     * @Route("/{id}/edit", name="admin_etape_edit", methods="GET|POST")
      */
     public function edit(Request $request, Etape $etape): Response
     {
@@ -65,17 +65,17 @@ class EtapeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('etape_index', ['id' => $etape->getId()]);
+            return $this->redirectToRoute('admin_etape_index', ['id' => $etape->getId()]);
         }
 
-        return $this->render('etape/edit.html.twig', [
+        return $this->render('back/etape/edit.html.twig', [
             'etape' => $etape,
             'form' => $form->createView(),
         ]);
     }
 
     /**
-     * @Route("/{id}", name="etape_delete", methods="DELETE")
+     * @Route("/{id}", name="admin_etape_delete", methods="DELETE")
      */
     public function delete(Request $request, Etape $etape): Response
     {
@@ -85,6 +85,6 @@ class EtapeController extends AbstractController
             $em->flush();
         }
 
-        return $this->redirectToRoute('etape_index');
+        return $this->redirectToRoute('admin_etape_index');
     }
 }

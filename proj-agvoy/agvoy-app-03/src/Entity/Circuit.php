@@ -187,6 +187,6 @@ class Circuit
     }
 
     public function __toString() {
-        return (string) $this->getId();
+        return "$this->id - $this->description";
     }
 }

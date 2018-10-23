@@ -23,8 +23,8 @@
                 <td>{{ etape.villeEtape }}</td>
                 <td>{{ etape.nombreJours }}</td>
                 <td>
-                    <a href="{{ path('etape_show', {'id': etape.id}) }}">show</a>
-                    <a href="{{ path('etape_edit', {'id': etape.id}) }}">edit</a>
+                    <a href="{{ path('admin_etape_show', {'id': etape.id}) }}">show</a>
+                    <a href="{{ path('admin_etape_edit', {'id': etape.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -35,5 +35,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('etape_new') }}">Create new</a>
+    <a href="{{ path('admin_etape_new') }}">Create new</a>
 {% endblock %}

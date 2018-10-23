@@ -13,11 +13,11 @@
     {% block header %}
         {{ render(controller('App\\Controller\\HeaderController:header')) }}
     {% endblock %}
-        {% block body %}
+        <div class="container-fluid">{% block body %}
             {% block menu %}{% endblock %} {# menu #}
             {% block main %}MAIN{% endblock %} {# main #}
         <br>
-        {% endblock %} {# body #}
+        {% endblock %}</div> {# body #}
         {% block footer %}
             <div class="card-footer text-center fixed-bottom">
                 <a class="text-primary" href={{ path('front') }}>Retour à l'accueil</a>
