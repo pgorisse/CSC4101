@@ -10,14 +10,33 @@
         {% endblock %}
     </head>
     <body>
-    {% block header %}
-        {{ render(controller('App\\Controller\\HeaderController:header')) }}
-    {% endblock %}
-        <div class="container-fluid">{% block body %}
-            {% block menu %}{% endblock %} {# menu #}
-            {% block main %}MAIN{% endblock %} {# main #}
-        <br>
-        {% endblock %}</div> {# body #}
+        {% block header %}
+            {{ render(controller('App\\Controller\\front\\HeaderController:header')) }}
+        {% endblock %}
+
+        <div class="container-fluid">
+            {% block body %}
+                {% block menu %}{% endblock %} {# menu #}
+                {% block main %}{% endblock %} {# main #}
+                <br>
+                {% block alerts %}
+                    {% for type, messages in app.session.flashBag.all %}
+                        {% for message in messages %}
+                            {%if type == 'error'%} {% set type = 'danger' %} {%endif%}
+                            {%if type == 'message'%} {% set type = 'info' %} {%endif%}
+                            <div class="alert alert-{{ type }} alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert">
+                                    <span aria-hidden="true">&times;</span>
+                                    <span class="sr-only">Close</span>
+                                </button>
+                                <p>{{ message|raw }}</p>
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                {% endblock %}
+            {% endblock %}
+        </div> {# body #}
+
         {% block footer %}
             <div class="card-footer text-center fixed-bottom">
                 <a class="text-primary" href={{ path('front') }}>Retour à l'accueil</a>

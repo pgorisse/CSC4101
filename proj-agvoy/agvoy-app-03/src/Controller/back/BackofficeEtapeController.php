@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\back;
 
 use App\Entity\Etape;
 use App\Form\EtapeType;
@@ -36,6 +36,8 @@ class BackofficeEtapeController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($etape);
             $em->flush();
+
+            $this->get('session')->getFlashBag()->add('message',"Etape $etape bien ajoutée!");
 
             return $this->redirectToRoute('admin_etape_index');
         }
@@ -84,6 +86,8 @@ class BackofficeEtapeController extends AbstractController
             $em->remove($etape);
             $em->flush();
         }
+
+        $this->get('session')->getFlashBag()->add('message',"Etape $etape supprimée!");
 
         return $this->redirectToRoute('admin_etape_index');
     }
