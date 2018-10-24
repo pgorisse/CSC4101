@@ -11,12 +11,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/etape")
+ * @Route("/admin/etape")
  */
-class EtapeController extends AbstractController
+class BackofficeEtapeController extends AbstractController
 {
     /**
-     * @Route("/", name="etape_index", methods="GET")
+     * @Route("/", name="admin_etape_index", methods="GET")
      */
     public function index(EtapeRepository $etapeRepository): Response
     {
@@ -24,7 +24,7 @@ class EtapeController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="etape_new", methods="GET|POST")
+     * @Route("/new", name="admin_etape_new", methods="GET|POST")
      */
     public function new(Request $request): Response
     {
@@ -47,7 +47,7 @@ class EtapeController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="etape_show", methods="GET")
+     * @Route("/{id}", name="admin_etape_show", methods="GET")
      */
     public function show(Etape $etape): Response
     {
@@ -55,7 +55,7 @@ class EtapeController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="etape_edit", methods="GET|POST")
+     * @Route("/{id}/edit", name="admin_etape_edit", methods="GET|POST")
      */
     public function edit(Request $request, Etape $etape): Response
     {
@@ -75,7 +75,7 @@ class EtapeController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="etape_delete", methods="DELETE")
+     * @Route("/{id}", name="admin_etape_delete", methods="DELETE")
      */
     public function delete(Request $request, Etape $etape): Response
     {
