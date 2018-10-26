@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\back;
 
 use App\Entity\Etape;
 use App\Form\EtapeType;
@@ -20,7 +20,7 @@ class BackofficeEtapeController extends AbstractController
      */
     public function index(EtapeRepository $etapeRepository): Response
     {
-        return $this->render('etape/index.html.twig', ['etapes' => $etapeRepository->findAll()]);
+        return $this->render('back/etape/index.html.twig', ['etapes' => $etapeRepository->findAll()]);
     }
 
     /**
@@ -37,10 +37,12 @@ class BackofficeEtapeController extends AbstractController
             $em->persist($etape);
             $em->flush();
 
-            return $this->redirectToRoute('etape_index');
+            $this->get('session')->getFlashBag()->add('message',"Etape $etape bien ajoutée!");
+
+            return $this->redirectToRoute('admin_etape_index');
         }
 
-        return $this->render('etape/new.html.twig', [
+        return $this->render('back/etape/new.html.twig', [
             'etape' => $etape,
             'form' => $form->createView(),
         ]);
@@ -51,7 +53,7 @@ class BackofficeEtapeController extends AbstractController
      */
     public function show(Etape $etape): Response
     {
-        return $this->render('etape/show.html.twig', ['etape' => $etape]);
+        return $this->render('back/etape/show.html.twig', ['etape' => $etape]);
     }
 
     /**
@@ -65,10 +67,10 @@ class BackofficeEtapeController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('etape_index', ['id' => $etape->getId()]);
+            return $this->redirectToRoute('admin_etape_index', ['id' => $etape->getId()]);
         }
 
-        return $this->render('etape/edit.html.twig', [
+        return $this->render('back/etape/edit.html.twig', [
             'etape' => $etape,
             'form' => $form->createView(),
         ]);
@@ -85,6 +87,8 @@ class BackofficeEtapeController extends AbstractController
             $em->flush();
         }
 
-        return $this->redirectToRoute('etape_index');
+        $this->get('session')->getFlashBag()->add('message',"Etape $etape supprimée!");
+
+        return $this->redirectToRoute('admin_etape_index');
     }
 }

@@ -10,6 +10,9 @@
     background-color: #0002;
 }
 
+.ct-landing{
+    background-image: url("../img/landing.jpg");
+}
 /*body{
 
     background: url("https://usersthink.com/img/99-free-images-large/02-usersthink-stock-image.jpg") no-repeat;

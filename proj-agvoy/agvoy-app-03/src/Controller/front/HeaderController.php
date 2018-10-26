@@ -6,7 +6,7 @@
  * Time: 12:35
  */
 
-namespace App\Controller;
+namespace App\Controller\front;
 use App\Entity\ProgrammationCircuit;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
