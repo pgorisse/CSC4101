@@ -12,6 +12,7 @@
 
 .ct-landing{
     background-image: url("../img/landing.jpg");
+    background-size: cover;
 }
 /*body{
 
