@@ -102,7 +102,11 @@ class Circuit
 
     public function getDureeCircuit(): ?int
     {
-        return $this->dureeCircuit;
+        $i = 0;
+        foreach ($this->getEtapes() as $etape) {
+            $i +=  $etape->getNombreJours();
+        }
+        return $i;
     }
 
     public function setDureeCircuit(?int $dureeCircuit): self
