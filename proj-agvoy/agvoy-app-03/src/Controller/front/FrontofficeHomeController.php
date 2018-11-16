@@ -15,6 +15,7 @@ class FrontofficeHomeController extends AbstractController
     public function index()
     {
         $progCircuits=$this->getDoctrine()->getRepository(ProgrammationCircuit::class)->findAll();
+        $circuits=$this->getDoctrine()->getRepository(Circuit::class)->findAll();
         return $this->render('front/home.html.twig', [
             'progCircuits' => $progCircuits,
         ]);

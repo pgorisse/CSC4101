@@ -111,7 +111,7 @@ class Circuit
 
     public function setDureeCircuit(?int $dureeCircuit): self
     {
-        $this->dureeCircuit = $dureeCircuit;
+        $this->dureeCircuit=$dureeCircuit;
 
         return $this;
     }
