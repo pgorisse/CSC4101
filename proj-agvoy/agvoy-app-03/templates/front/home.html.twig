@@ -76,9 +76,7 @@
             <br>
             <div class="table-responsive">
 
-                NE FONCTIONNE PAS ENCORE
-
-                {#<table class="table table-striped table-bordered">
+                <table class="table table-striped table-bordered">
                     <thead>
                     <tr>
                         <th>Description</th>
@@ -86,29 +84,25 @@
                         <th>Pays de départ</th>
                         <th>Durée</th>
                         <th>Ville d'arrivée</th>
-                        <th>Date du départ</th>
-                        <th>Prix</th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
                     {% for circuit in circuits %}
                         <tr>
-                            <td>{{ circuit.circuit.description }}</td>
-                            <td>{{ circuit.circuit.villeDepart }}</td>
-                            <td>{{ circuit.circuit.paysDepart }}</td>
-                            <td>{{ circuit.circuit.dureeCircuit }} jour(s)</td>
-                            <td>{{ circuit.circuit.villeArrivee }}</td>
-                            <td>{{ circuit.dateDepart|date('d-m-Y') }}</td>
-                            <td>{{ circuit.prix }}€</td>
+                            <td>{{ circuit.description }}</td>
+                            <td>{{ circuit.villeDepart }}</td>
+                            <td>{{ circuit.paysDepart }}</td>
+                            <td>{{ circuit.dureeCircuit }} jour(s)</td>
+                            <td>{{ circuit.villeArrivee }}</td>
                             <td>
                                 <p>
-                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#details{{ loop.index }}" aria-expanded="false" aria-controls="collapseExample">
+                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#details2{{ loop.index }}" aria-expanded="false" aria-controls="collapseExample">
                                         Détails
                                     </button>
                                 </p>
 
-                                <div class="collapse" id="details{{ loop.index }}">
+                                <div class="collapse" id="details2{{ loop.index }}">
                                     <table class="table table-striped table-bordered">
                                         <thead><tr>
                                             <th>Numéro</th>
@@ -116,7 +110,7 @@
                                             <th>Durée</th>
                                         </tr></thead>
 
-                                        <tbody>{%  for etape in circuit.circuit.etapes %}
+                                        <tbody>{%  for etape in circuit.etapes %}
                                             <tr>
                                                 <td>{{ etape.numeroEtape }}</td>
                                                 <td>{{ etape.villeEtape }}</td>
@@ -124,9 +118,10 @@
                                             </tr>
                                         {% else %}
                                             <p>Pas d'étapes trouvées.</p>
-                                        {% endfor %} #}{# etapes #}{#</tbody>
+                                        {% endfor %} {# etapes #}
+                                        </tbody>
                                     </table>
-                                    <a class="btn btn-outline-primary" href="{{ path('front_circuit_show', {id:circuit.id})  }}"><i class="fa fa-info-circle"></i> Voir plus...</a>
+                                    <a class="btn btn-outline-primary" href="{{ path('admin_circuit_show', {id:circuit.id})  }}"><i class="fa fa-info-circle"></i> Voir plus...</a>
 
                                 </div>
 
@@ -138,7 +133,7 @@
                         </tr>
                     {% endfor %}
                     </tbody>
-                </table>#}
+                </table>
             </div>
         {% endif %}
 

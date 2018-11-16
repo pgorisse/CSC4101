@@ -16,6 +16,17 @@ class FrontofficeHomeController extends AbstractController
     {
         $progCircuits=$this->getDoctrine()->getRepository(ProgrammationCircuit::class)->findAll();
         $circuits=$this->getDoctrine()->getRepository(Circuit::class)->findAll();
+        if($this->isGranted('ROLE_ADMIN')){
+            $circuits=$this->getDoctrine()->getRepository(Circuit::class)->findAll();
+            $circuits=array_diff($circuits,$progCircuits);
+            return $this->render(
+                'front/home.html.twig',
+                [
+                    'progCircuits' => $progCircuits,
+                    'circuits' => $circuits,
+                ]
+            );
+        }
         return $this->render('front/home.html.twig', [
             'progCircuits' => $progCircuits,
         ]);
@@ -28,7 +39,6 @@ class FrontofficeHomeController extends AbstractController
     public function circuitShow($id){
         $em=$this->getDoctrine()->getManager();
         $progCircuit=$em->getRepository(ProgrammationCircuit::class)->find($id);
-        dump($progCircuit);
         return $this->render("front/circuit_show.html.twig",[
             'progCircuit' => $progCircuit,
         ]);

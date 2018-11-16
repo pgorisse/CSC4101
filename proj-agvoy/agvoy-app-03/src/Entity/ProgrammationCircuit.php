@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Circuit;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProgrammationCircuitRepository")
@@ -87,5 +88,10 @@ class ProgrammationCircuit
         $this->circuit = $circuit;
 
         return $this;
+    }
+    public function __toString() {
+        $number=$this->getCircuit()->getId();
+        $text=$this->getCircuit()->getDescription();
+        return "$number - $text";
     }
 }
