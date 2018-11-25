@@ -3,12 +3,16 @@
 namespace App\Controller\back;
 
 use App\Entity\Circuit;
+use App\Entity\Etape;
 use App\Form\CircuitType;
+use App\Form\EtapeType;
 use App\Repository\CircuitRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 /**
  * @Route("/admin/circuit")
@@ -91,5 +95,29 @@ class BackofficeCircuitController extends AbstractController
         $this->get('session')->getFlashBag()->add('message',"Circuit $circuitrip supprimé!");
 
         return $this->redirectToRoute('admin_circuit_index');
+    }
+    /**
+     * @Route("/{id}/addetape", name="admin_circuit_addetape")
+     *
+     */
+    public function addEtape(Request $request, Circuit $circuit){
+
+        $etape = new Etape();
+
+        $form = $this->createForm(EtapeType::class, $etape, array('circuits_list'=>array("0"=>$circuit)));
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($etape);
+            $em->flush();
+            $this->get('session')->getFlashBag()->add('message',"Etape $etape bien ajoutée!");
+            return $this->redirectToRoute('admin_circuit_show',array('id'=>$circuit));
+        }
+
+        return $this->render('back/circuit/addEtape.html.twig',[
+            'circuit' => $circuit,
+            'form' => $form->createView()
+        ]);
     }
 }

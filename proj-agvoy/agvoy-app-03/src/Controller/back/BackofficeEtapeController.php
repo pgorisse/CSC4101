@@ -2,6 +2,7 @@
 
 namespace App\Controller\back;
 
+use App\Entity\Circuit;
 use App\Entity\Etape;
 use App\Form\EtapeType;
 use App\Repository\EtapeRepository;
@@ -28,12 +29,13 @@ class BackofficeEtapeController extends AbstractController
      */
     public function new(Request $request): Response
     {
+        $circuits_list=$this->getDoctrine()->getManager()->getRepository(Circuit::class)->findAll();
         $etape = new Etape();
-        $form = $this->createForm(EtapeType::class, $etape);
+        $form = $this->createForm(EtapeType::class, $etape, array('circuits_list' => $circuits_list));
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
+            $em=$this->getDoctrine()->getManager();
             $em->persist($etape);
             $em->flush();
 
@@ -61,7 +63,9 @@ class BackofficeEtapeController extends AbstractController
      */
     public function edit(Request $request, Etape $etape): Response
     {
-        $form = $this->createForm(EtapeType::class, $etape);
+        $circuits_list=$this->getDoctrine()->getManager()->getRepository(Circuit::class)->findAll();
+        dump($circuits_list);
+        $form = $this->createForm(EtapeType::class, $etape,array('circuits_list' => $circuits_list));
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

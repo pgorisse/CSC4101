@@ -36,9 +36,8 @@ class FrontofficeHomeController extends AbstractController
      * Finds and displays a circuit entity
      * @Route("/circuit/{id}", name="front_circuit_show")
      */
-    public function circuitShow($id){
-        $em=$this->getDoctrine()->getManager();
-        $progCircuit=$em->getRepository(ProgrammationCircuit::class)->find($id);
+
+    public function circuitShow(ProgrammationCircuit $progCircuit){
         return $this->render("front/circuit_show.html.twig",[
             'progCircuit' => $progCircuit,
         ]);

@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Détails de l'étape {{ etape.villeEtape }}</h1>
 
-    <table class="table">
+    <table class="table table-striped table-bordered">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -22,6 +22,14 @@
             <tr>
                 <th>NombreJours</th>
                 <td>{{ etape.nombreJours }}</td>
+            </tr>
+            <tr>
+                <th>Circuit</th>
+                {% if etape.circuit.description != null %}
+                    <td>{{ etape.circuit.description }}</td>
+                {% else %}
+                    <td>Pas de circuit</td>
+                {% endif %}
             </tr>
         </tbody>
     </table>
