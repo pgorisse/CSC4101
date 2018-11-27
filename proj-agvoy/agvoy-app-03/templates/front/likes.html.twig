@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block title %} Vos mentions j'aime {% endblock %}
+{% block body %}
+    <h4>Vos mentions j'aime</h4>
+    {% if likes != null %}
+        <table class="table table-light">
+            {% for like in likes %}
+                <tr>
+                    <td>
+                        {{ like|slice(5) }}
+                    </td>
+                    <td>
+                        <a href="{{ path('front_circuit_show', {id:like.id})  }}">Consulter ce circuit</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-primary" href="{{ path('front_circuit_like',{id:like.id} )}}">Je n'aime plus ce circuit</a>
+                    </td>
+                </tr>
+        {% endfor %}
+        </table>
+    {% else %}
+        <p class="text-center">
+            Vous n'avez pas encore de circuits préferés. Faites votre choix parmis
+            <a href="{{ path('front') }}">nos circuits</a>!
+        </p>
+    {% endif %}
+{% endblock %}

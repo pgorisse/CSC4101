@@ -27,6 +27,32 @@ class User extends BaseUser
      */
     private $lastname;
 
+    /**
+     * @ORM\Column(type="simple_array", length=255, nullable=true)
+     */
+    private $likes;
+
+    /**
+     * @return mixed
+     */
+    public function getLikes()
+    {
+        return $this->likes;
+    }
+
+    /**
+     * @param mixed $likes
+     */
+    public function setLikes($likes): void
+    {
+        $this->likes = $likes;
+    }
+
+    public function addLikes($like): void
+    {
+        $this->likes[]=$like;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -55,4 +81,6 @@ class User extends BaseUser
 
         return $this;
     }
+
+
 }

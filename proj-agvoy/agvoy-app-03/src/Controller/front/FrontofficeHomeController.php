@@ -3,6 +3,7 @@
 namespace App\Controller\front;
 
 use App\Entity\Circuit;
+use App\Entity\User;
 use App\Entity\ProgrammationCircuit;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -48,21 +49,41 @@ class FrontofficeHomeController extends AbstractController
      */
     public function circuitLike($id){
         $em=$this->getDoctrine()->getManager();
+        $user=$this->getUser();
         $progCircuit=$em->getRepository(ProgrammationCircuit::class)->find($id);
-        $likes=$this->get('session')->get('likes');
-        if ($likes==null){
-            $likes=[];
+        //##########If the user user authenticated, we refer to it's account's likes, else to the session likes.
+        if($user){
+            $likes=$user->getLikes();
+            if ($likes==null){
+                $likes=[];
+            }
+            if (! in_array($id, $likes) ) {
+                $likes[] = $id;
+                $this->get('session')->getFlashBag('message','Circuit ajouté aux likes');
+            }
+            else {
+                $likes = array_diff($likes, array($id));
+                $this->get('session')->getFlashBag('message',"Circuit enlevé des likes");
+            }
+            $user->setLikes($likes);
+            $em->persist($user);
+            $em->flush();
+        } else {
+            $likes=$this->get('session')->get('likes');
+            if ($likes==null){
+                $likes=[];
+            }
+            if (! in_array($id, $likes) ) {
+                $likes[] = $id;
+                $this->get('session')->getFlashBag('message','Circuit ajouté aux likes');
+            }
+            else {
+                $likes = array_diff($likes, array($id));
+                $this->get('session')->getFlashBag('message',"Circuit enlevé des likes");
+            }
+            $this->get('session')->set('likes', $likes);
         }
-        if (! in_array($id, $likes) ) {
-            $likes[] = $id;
-            $this->get('session')->getFlashBag('message','Circuit ajouté aux likes');
-        }
-        else {
-            $likes = array_diff($likes, array($id));
-            $this->get('session')->getFlashBag('message',"Circuit enlevé des likes");
-        }
-        $this->get('session')->set('likes',$likes);
-        dump($likes);
+
         return $this->render("front/circuit_show.html.twig",[
             'progCircuit'=>$progCircuit
         ]);
@@ -71,6 +92,27 @@ class FrontofficeHomeController extends AbstractController
         $em=$this->getDoctrine()->getManager();
         $progCircuits=$em->getRepository(ProgrammationCircuit::class)->findAll();
         return array(['progCircuits' => $progCircuits,]);
+    }
+    /**
+     * @Route("/my_likes", name="front_likes")
+     */
+    public function myLikes(){
+        $em=$this->getDoctrine()->getManager();
+        if($this->getUser()){
+            $likes_id=$this->getUser()->getLikes();
+            dump($this->getUser()->getFirstname(), $this->getUser()->getId());
+        } else{
+            $likes_id=$this->get('session')->get('likes');
+        }
+        $likes=[];
+        if ($likes_id != null) {
+            foreach ($likes_id as $id) {
+                $likes[] = $em->getRepository(ProgrammationCircuit::class)->find($id);
+            }
+        }
+        return $this->render("front/likes.html.twig",[
+           'likes'=>$likes
+        ]);
     }
 }
 

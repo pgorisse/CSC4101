@@ -32,6 +32,11 @@
                             <a class="nav-link text-dark" href="{{ path('fos_user_security_logout') }}">Logout</a>
                         </li>
                     {% endif %}
+                    {% if not is_granted('ROLE_ADMIN') %}
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="{{ path('front_likes') }}">Mes likes</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </nav>
         </div>
