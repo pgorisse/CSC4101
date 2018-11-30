@@ -1,24 +1,12 @@
-{# templates/home.html.twig #}
-
-{# Template de la page d'accueil de l'application #}
-
-{% extends "base.html.twig" %}
-
-{% block title %}{{ parent() }}{% endblock %}
-{% block header %}{% endblock %}
-
-{#La landing page n'est pas finie. nous n'arrivons notamment pas a
-faire couvrir totalement le fond par l'image pour l'instant...#}
-
-{% block main %}
-    <div class="container-fluid ct-landing h-100">
-        <div class="text-center pagination-lg h-100">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/all.css') }}">
+<title>AgVoy</title>
+<div class="container-fluid ct-landing">
+    <div class="row align-items-center text-center pagination-lg h-100 ">
+        <div class="col align-items-center">
             <h1>Welcome</h1>
             <p>{{ welcome }}</p> <br>
             <a class='btn btn-outline-primary btn-lg' href="{{ path('front') }}">Accueil</a>
-        </div><br><br><br><br><br><br><br><br>
+        </div>
     </div>
-{% endblock %} {# main #}
-{% block footer %}{% endblock %}
-
-
+</div>
